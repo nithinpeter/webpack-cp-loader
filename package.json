@@ -1,6 +1,6 @@
 {
   "name": "cp-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webpack loader for copy and paste content in the same file.",
   "main": "src/index.js",
   "files": ["src"],
@@ -17,5 +17,8 @@
   },
   "peerDependencies": {
     "webpack": ">= 2.x.x"
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0"
   }
 }
