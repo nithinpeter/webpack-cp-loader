@@ -1,8 +1,13 @@
 const loaderUtils = require('loader-utils');
 
 module.exports = function(source) {
-  const options = loaderUtils.getOptions(this);
-  const regex = /\/\*start:story:(.+?)\*\/\n([\s\S]*?)\/\*end:story:(.+?)\*\//gm;
+  const { pattern = '' } = loaderUtils.getOptions(this);
+  const regex = new RegExp(
+    `\/[*]{1}start:${pattern}:(.+?)[*]{1}\/` +
+      `([\\s\\S]*?)` +
+      `\/[*]{1}end:${pattern}:(.+?)[*]{1}\/`,
+    'gm'
+  );
 
   while ((result = regex.exec(source)) !== null) {
     const storyId = result[1];
@@ -19,10 +24,7 @@ module.exports = function(source) {
   return;
 };
 
-// TODO
-
 // type options = {
-//   multiple: boolean,
 //   pattern: string,
 // };
 

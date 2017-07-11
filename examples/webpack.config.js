@@ -16,7 +16,7 @@ const config = {
         use: {
           loader: 'cp-loader',
           options: {
-            match: true,
+            pattern: 'story',
           },
         },
       },
