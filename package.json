@@ -1,9 +1,9 @@
 {
-  "name": "webpack-cp-loader",
+  "name": "cp-loader",
   "version": "0.1.0",
-  "description": "Webpack loader for copy and/or paste content.",
-  "main": "./src/index.js",
-  "files": ["./src"],
+  "description": "Webpack loader for copy and paste content in the same file.",
+  "main": "src/index.js",
+  "files": ["src"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "example": "webpack --config ./examples/webpack.config.js",
@@ -14,5 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "webpack": "^3.1.0"
+  },
+  "peerDependencies": {
+    "webpack": ">= 2.x.x"
   }
 }
