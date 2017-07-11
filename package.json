@@ -1,0 +1,18 @@
+{
+  "name": "webpack-cp-loader",
+  "version": "0.1.0",
+  "description": "Webpack loader for copy and/or paste content.",
+  "main": "./src/index.js",
+  "files": ["./src"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "webpack --config ./examples/webpack.config.js",
+    "start": "webpack --config ./examples/webpack.config.js"
+  },
+  "keywords": ["wepback", "webpack-loader", "copy-paste", "cp"],
+  "author": "nithinpeter7@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.1.0"
+  }
+}
